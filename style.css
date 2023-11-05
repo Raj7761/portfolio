@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Poppins:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 99;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+span{
+    color: red;
+}
+
+.nav-cnt a{
+    position: relative;
+    margin-left: 2em;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    color: #fff;
+    
+}
+
+.nav-cnt a.active{
+    color: red;
+    
+}
+
+.nav-cnt a.active::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: red;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+}
+
+
+.nav-cnt a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: red;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.nav-cnt a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.nav-cnt a:hover{
+    transition: 0.5s;
+    color: red;
+}
+.logo{
+    font-size: 2em;
+    font-weight: 800;
+    color: #fff;
+}
+
+
+.btn{
+    width: 130px;
+    height: 50px;
+    border: 2px solid red;
+    color: red;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+} 
+
+
+.btn:hover{
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+}
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    width:100%;
+    gap: 40px;
+}
+
+
+.name{
+    font-weight: 900;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.occ{
+    font-weight: 900;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.homedetail p{
+    margin-top: 15px;
+    width: 400px;
+    font-weight: 400;
+    font-size: .7em;
+    color: #fff;
+}
+
+.home-icon {
+    margin-top: 30px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 800;
+}
+.icons a{
+    text-decoration: none;
+    color: red;
+}
+.icons a:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.bton{
+    color: #fff;
+    padding: 10px  20px;
+    border: 2px solid red;
+    outline: none;
+    border-radius: 20px;
+}
+
+.bton:hover{
+    background-color: red;
+    transition: 0.5s;
+}
+
+
+.home-img{
+    margin-left: 0px;
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255, 0, 0, 0.833);
+    border-radius: 20px;
+    width: 380px;
+    height: 380px;
+    border-radius: 4px;
+}
+
+/*.imgs{
+    width: 390px;
+    height: 390px;
+    backdrop-filter: blur(20px);
+    background: transparent;
+    border-radius: 20px;
+    rotate: 0deg;
+    margin-left: -420px;   
+}*/
+
+
+.about{
+    color: red;
+    width: 100%;
+    gap: 40px;
+}
+
+.heading {
+    margin-top: -20px;
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 3px;
+}
+
+.heading span{
+    color: red;
+}
+
+.aboutdetails{
+    margin-top: 70px;
+    display: flex;
+    align-items:initial;
+    justify-content: center;
+    gap: 40px;
+}
+
+.aboutdetails h6{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.aboutdetails span{
+    color: red;
+}
+
+
+.aboutdetails h5{
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.aboutdetails p{
+    margin-top: 10px;
+    width: 450px;
+    font-weight: lighter;
+    font-size: .8em;
+    color: #fff;;
+}
+
+.about-img{
+    background-image: url(bg.jpeg);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    border: 4px solid rgba(255, 0, 0, 0.833);
+    border-radius: 20px;
+    width: 380px;
+    height: 380px;
+    border-radius: 4px;
+}
+
+.about-ddl .bton{
+    margin-top: 20px;
+}
+
+
+.ser-sec{
+    margin-top: 70px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px ;
+}
+
+.ser-sec .aa{
+    height: 400px;
+    width: 270px;
+    border: 2px solid red;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px 40px;
+} 
+
+.sub-heading{
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+.sub-heading span{
+    color: red;
+}
+
+.aa:hover{
+    height: 410px;
+    padding: -40px;
+    transition: 0.5s;
+    box-shadow: 0 0 30px rgba(200, 30, 30, 0.974);
+}
+
+.aa ul{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    font: 200;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.aa .bton{
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.cont{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 500px;
+    justify-content: space-around;
+}
+
+.box{
+    width: 220px;
+    height: 250px;
+    border: 2px solid  rgb(220, 220, 220);
+    outline: none;
+    border-radius: 20px;
+    transition: .5s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.box:hover{
+    width: 330px;
+    box-shadow: 0 0 30px rgba(220, 220, 220, 0.733);
+    border:none;
+}
+
+.port1{
+    background-image: url(bg1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.port2{
+    background-image: url(bg2.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.port3{
+    background-image: url(bg3.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.port4{
+    background-image: url(bg4.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.box h1{
+    padding: 10px 10px;
+    background: transparent;
+    background-color:rgba(220, 220, 220, 0.733);
+    font: 500;
+    font-size: 1.5em;
+}
+
+.box .cntn{
+    top: 0;
+    right: 0;
+    font: 100;
+    font-size: 1em;
+    width: 330px;
+    background-color:rgba(220, 220, 220, 0.733);
+    color: white;
+}
+
+.box .ctn{
+    display: flex;
+    align-items: center;
+    font: 100;
+    font-size: 1em;
+    background-color: transparent;
+    gap: 50px;
+    margin-top: -20px;
+    padding-left: 5px;
+}
+
+.box h2{
+    margin-top: 100px;
+    font: 700;
+    font-size: 1em;
+    padding-left: 5px;
+    background-color: transparent;
+    color: #162735;
+}
+
+
+.box p{
+    width: 220px;
+    background-color: rgba(220, 220, 220, 0);
+    color: #162938;
+    font-weight: lighter;
+    font-size: .7em;   
+
+}
+
+.box div{
+    margin-top: 15px;
+    background-color: transparent;
+    width: fit-content;
+    color: white;
+    font-size: 3em;
+}
+
+.conatiner{
+    margin-top: 50px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+}
+
+.txt{
+    padding-top: 50px;
+    width: 50%;
+    height: fit-content;
+    font-size: 3em;
+}
+
+.txt h1{
+    padding-left: 40px;
+    color: red;
+}
+
+.txt h2{
+    padding-left: 150px;
+}
+
+.conatiner .inp{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.inp .name{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+    font-size: 1em;
+    gap: 30px;
+}
+.inp input{
+    border: 1px solid red;
+    border-radius: 8px;
+    width: 250px;
+    height: 30px;
+    color: #fff;
+    outline: none;
+    text-indent: 10px;
+}
+
+.inp .name input{
+    gap: 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    outline: none;
+    height: 30px;
+    width: 250px;
+    
+}
+
+.inp h1{
+    margin-top: -80px;
+    margin-left: 280px;
+    font-size: 1em;
+}
+
+#subject{
+    width: 525px;
+    border:1px solid red;
+    border-radius: 8px;
+    outline: none;
+    color: #fff;
+    padding: 10PX 10PX;
+}
+.inp .bton{
+    width: 150px;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width:900px) {
+    section{
+        min-height: max-content;
+        padding: 70px 20px;
+    }
+    header{
+        padding: 10px 20px;
+    }
+    .logo{
+        font-size: 1.5em;
+    }
+    .nav-cnt{
+        display: none;
+    }
+    header .btn{
+        width: 120px;
+        height: 30px;
+        font-size: .8em;
+    }
+    .home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .name,.occ{
+        font-size: 1.5em;
+    }
+    .home p{
+        font-size: .8em;
+        width: 100%;
+    }
+    .icons{
+
+    text-decoration: none;
+        display: flex;
+        width: auto;
+        height: max-content;
+    }
+    .home .home-icon{
+        position: relative;
+        width: 100%;
+        margin-top: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    .home-img{
+        width: 350px;
+        height: 300px;
+        margin-top: -400px;
+    }
+    .heading{
+        margin-top:-40px ;
+        font-size: 1.5em;
+    }
+    .aboutdetails{
+        margin-top: 20px;
+    }
+    .about-ddl{
+        margin-top:40px;
+        width: 100%;
+    }
+    .about .heading{
+        margin-top: 10px;
+    }
+    .about-ddl p{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .about-img{
+        display: none;
+    }
+    .about-ddl .bton{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: .8em;
+    }
+    .ser-sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 430px;
+    }
+    .cont{
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .cont .box{
+        width: 250px;
+        height: 250px;
+    }
+    .box:hover{
+        width: 330px;
+    }
+    .portofolio .heading{
+        margin-top: 280px;
+    }
+    .service .heading{
+        margin-top: -100px;
+    }
+    .conatiner .name input{
+        width: 100%;
+    }
+    .conatiner{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inp h1{
+        margin-left: 0px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .txt{
+        display: none;
+    }
+    .conatiner input{
+        width: 320px;
+    }
+    #subject{
+        width: 320px;
+    }
+    #email{
+        width: 320px;
+    }
+}
